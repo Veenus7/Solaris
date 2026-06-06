@@ -1,0 +1,17 @@
+import sqlite3
+
+DB_PATH = "data/finance.db"
+
+
+def get_connection():
+    return sqlite3.connect(DB_PATH)
+
+
+def create_tables():
+    conn = get_connection()
+
+    with open("database/schema.sql") as f:
+        conn.executescript(f.read())
+
+    conn.commit()
+    conn.close()
