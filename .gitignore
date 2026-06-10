@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+data/finance.db
+uploads/
+reports/
+rag/faiss_db/
