@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-from database.db import get_connection
+from database.db import get_connection, create_tables
 from dotenv import load_dotenv
 
 load_dotenv()
-
+create_tables()
 st.set_page_config(
     page_title="Solaris AI",
     page_icon="☀️",
